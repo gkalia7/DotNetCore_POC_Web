@@ -1,0 +1,47 @@
+﻿@model List<FinalSearchResultModel>
+
+@{
+		ViewData["Title"] = "Search Result";
+}
+
+<style>
+		table {
+				padding-top: 5px;
+				font-family: arial, sans-serif;
+				border-collapse: collapse;
+				width: 100%;
+		}
+
+		td, th {
+				border: 1px solid #dddddd;
+				text-align: left;
+				padding: 8px;
+		}
+
+		tr:nth-child(even) {
+				background-color: #dddddd;
+		}
+</style>
+
+<h4>Search Result</h4>
+
+<table>
+		<thead>
+				<tr>
+						<th>Name</th>
+						<th>City</th>
+						<th>PinCode</th>
+						<th>Country</th>
+				</tr>
+		</thead>
+		<tbody>
+				@foreach(var item in Model) {
+						<tr>
+								<td>@item.Name</td>
+								<td>@item.City</td>
+								<td>@item.Pincode</td>
+								<td>@item.Country</td>
+						</tr>
+				}
+		</tbody>
+</table>

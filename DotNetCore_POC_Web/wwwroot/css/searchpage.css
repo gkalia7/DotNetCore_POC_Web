@@ -1,0 +1,14 @@
+﻿body {
+}
+
+#txtSearchBox {
+		width:250px;
+}
+
+.action-buttons {
+		padding-top: 5px;
+}
+
+.input-validation-error {
+		border-color: red;
+}

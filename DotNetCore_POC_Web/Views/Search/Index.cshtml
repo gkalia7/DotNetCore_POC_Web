@@ -1,0 +1,49 @@
+﻿@model SearchParameterModel;
+
+@{
+		ViewData["Title"] = "Search Page";
+}
+
+<style>
+		.form-control {
+				width: 50%;
+		}
+</style>
+
+<h4>Search Page - </h4>
+@*<div class="container">
+		<div class="search-controls">
+				<label for="txtCertId">Cert Id (Member) : </label>
+				<input id="txtCertId" type="text" placeholder="Enter member here to search" />
+				<br />
+				<label for="startDate">Start Date :</label>
+				<input type="date" title="Select Start Date" id="startDate" />
+				<label for="endDate" style="padding-left:5px;">End Date : </label>
+				<input type="date" title="Select End Date" id="endDate" />
+		</div>
+		<div class="action-buttons">
+				<input type="button" value="Search" title="click to search" />
+				<input type="button" value="Reset" title="click to reset the search controls" onclick="resetdata();" />
+		</div>
+</div>*@
+
+<div asp-validation-summary="All" class="text-danger"></div>
+
+<form class="m-1 p-1" method="post">
+		<div class="form-group">
+				<label asp-for="CertId">Cert Id (Member) : </label>
+				<input asp-for="CertId" class="form-control" type="text" placeholder="Enter member here to search" />
+				<span asp-validation-for="CertId" class="text-danger"></span>
+		</div>
+		<div class="form-group">
+				<label asp-for="StartDate">Start Date :</label>
+				<input asp-for="StartDate" type="date" class="form-control" />
+				<span asp-validation-for="StartDate" class="text-danger"></span>
+		</div>
+		<div class="form-group">
+				<label asp-for="EndDate">End Date :</label>
+				<input asp-for="EndDate" type="date" class="form-control" />
+				<span asp-validation-for="EndDate" class="text-danger"></span>
+		</div>
+		<button type="submit" class="btn btn-primary" title="Click to search">Search</button>
+</form>
